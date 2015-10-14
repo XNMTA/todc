@@ -1,0 +1,22 @@
+group 'todc'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    //mavenCentral()
+    maven {
+        url 'http://nexus.dins.ru:8888/nexus/content/groups/public/'
+    }
+
+    maven {
+        url 'http://maven.atlassian.com/public/'
+    }
+}
+
+dependencies {
+    testCompile 'info.cukes:cucumber-junit:1.2.4'
+    testCompile 'junit:junit:4.12'
+}
